@@ -10,26 +10,67 @@
 <br/>
 <div>
     <form action="do-nothing">
-        <p>Nome: </p>
-        <label for="nome"></label><input id="nome" type="text">
-        <p>Cognome: </p>
-        <label for="cognome"></label><input id="cognome" type="text">
-        <p>Sesso: </p>
-        <input type="radio" id="choice1" name="Sesso" value="maschio" />
-        <label for="choice1">Maschio</label>
+        <label for="nome">Nome: </label>
+        <input id="nome" name="name" type="text" required>
 
-        <input type="radio" id="choice2" name="Sesso" value="femmina" />
-        <label for="choice2">Femmina</label>
+        <label for="cognome">Cognome: </label>
+        <input id="cognome" name="cognome" type="text" required>
 
-        <p>Città: </p>
-        <label for="citta"></label><input id="citta" type="text">
-        <p>Provincia: </p>
-        <label for="provincia"></label><input id="provincia" type="text">
-        <p>Codice postale: </p>
-        <label for="cod_post"></label><input id="cod_post" type="text">
-        <p>Strada: </p>
-        <label for="strada"></label><input id="strada" type="text">
+        <label for="email">Email: </label>
+        <input id="email" type="text" name="email" required><br><br>
 
+        <label>Sesso: </label><br>
+        <input type="radio" id="choice1" name="sesso" value="maschio" />
+        <label for="choice1">Maschio</label><br>
+        <input type="radio" id="choice2" name="sesso" value="femmina" />
+        <label for="choice2">Femmina</label><br>
+
+        <label for="n_identita">Numero carta identita': </label><br>
+        <input id="n_identita" type="text" name="cardID" pattern="[A-Z]{2}[0-9]{5}[A-Z]{2}"><br>
+
+        <label for="citta">Citta': </label><br>
+        <input id="citta" type="text" name="citta"><br>
+
+        <label for="provincia">Provincia: </label><br>
+        <input id="provincia" type="text" name="provincia"><br>
+
+        <label for="cod_post">Codice postale: </label><br>
+        <input id="cod_post" type="text" name="postal_code"><br>
+
+        <label for="strada">Strada: </label><br>
+        <input id="strada" type="text" name="strada"><br>
+
+        <label for="colore">Colore preferito: </label><br>
+        <input id="colore" type="color" name="colore"><br>
+
+        <label for="numero">Numero di telefono</label><br>
+        <input id="numero" type="text" pattern="[0-9]{9}|[0-9]{10}"><br>
+
+        <label for="numero_pref">Numero preferito</label><br>
+        <input id="numero_pref" type="text" pattern="[0-9]+"><br>
+
+        <label for="istruzione">Grado di istruzione</label>
+        <select name="istruzione" id="istruzione">
+            <option value="medie">Medie</option>
+            <option value="superiori">Superiori</option>
+            <option value="elementari">Elementari</option>
+        </select>
+        <br><br>
+        <label> Dispositivi posseduti</label><br>
+        <input type="checkbox" id="pc" name="devices_pc" value="pc">
+        <label for="pc"> PC</label><br>
+        <input type="checkbox" id="laptop" name="devices_laptop" value="laptop">
+        <label for="laptop"> Laptop</label><br>
+        <input type="checkbox" id="other" name="devices_other" value="other">
+        <label for="other"> Other</label><br>
+
+        <textarea id="textarea" name="othertext">
+        </textarea>
+
+        <br>
+        <label for="password">Password: </label><br>
+        <input type="text" id="password" name="password">
+        <input type="reset" value="Reset">
         <input type="submit" value="Send Request" />
     </form>
 </div>
